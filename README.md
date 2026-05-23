@@ -7,14 +7,10 @@ A lightweight, embeddable widget that displays CookieChain social links, token i
 Add this single line anywhere in your HTML where you want the widget to appear:
 
 ```html
-<script src="https://iamabotama.github.io/cookienetsites/cookiechain-page-embed.html"></script>
+<script src="https://cdn.jsdelivr.net/gh/iamabotama/cookienetsites@main/cookiechain-page-embed.html"></script>
 ```
 
-Or use the raw GitHub URL:
-
-```html
-<script src="https://raw.githubusercontent.com/iamabotama/cookienetsites/main/cookiechain-page-embed.html"></script>
-```
+This works on any website including Webflow, Squarespace, WordPress, and custom sites.
 
 ## What It Displays
 
