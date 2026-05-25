@@ -4,10 +4,6 @@
   "ca": "PASTE_CONTRACT_ADDRESS_HERE",
   "links": [
     {
-      "label": "Gorbagana Cash",
-      "url": "https://www.gorbagana.cash/"
-    },
-    {
       "label": "CookieScan",
       "url": "https://cookiescan.io"
     },
@@ -18,6 +14,10 @@
     {
       "label": "CandyShop",
       "url": "https://swap.cookiescan.io/"
+    },
+    {
+      "label": "Cookie Swap",
+      "url": "https://cookieswap.fun/"
     }
   ]
 }
