@@ -22,6 +22,22 @@
     {
       "label": "Cookieora",
       "url": "https://www.cookieora.com/"
-    }    
+    },
+    {
+      "label": "Cookie Chain",
+      "url": "https://cookiechain.wtf"
+    },
+    {
+      "label": "Cookie Chain Docs",
+      "url": "https://docs.cookiechain.wtf"
+    },
+    {
+      "label": "Cookie Squad Multi-Sig",
+      "url": "https://sig.cookiechain.wtf"
+    },
+    {
+      "label": "Cookienet Bridge",
+      "url": "https://bridge.cookiescan.io"
+    }
   ]
 }
