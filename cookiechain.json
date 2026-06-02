@@ -4,12 +4,16 @@
   "ca": "36ZrtQoab5MhhySaP1YSTwUahSk6GRVUTtZ6cuVfm9e1",
   "links": [
     {
-      "label": "Cookie Chain Docs",
-      "url": "https://docs.cookiechain.wtf"
+      "label": "Cookie Chain",
+      "url": "https://cookiechain.wtf"
     },
     {
       "label": "CookieScan",
       "url": "https://cookiescan.io"
+    },
+    {
+      "label": "Cookie Chain Docs",
+      "url": "https://docs.cookiechain.wtf"
     },
     {
       "label": "Cookoven",
@@ -26,10 +30,6 @@
     {
       "label": "CookieBox",
       "url": "https://cookiebox.app/"
-    },
-    {
-      "label": "Cookie Chain",
-      "url": "https://cookiechain.wtf"
     },
     {
       "label": "Cookie Squad Multi-Sig",
