@@ -31,7 +31,7 @@ Cookie Chain originated as a community rescue of the Gorbagana ecosystem. Gorbag
 
 ### 1.2 The Genesis Snapshot
 
-On [VERIFY: snapshot date], the community took a complete snapshot of all $GOR balances on the legacy chain. Cookie Chain launched on May 26, 2026 with this snapshot as its genesis state:
+Prior to the May 26, 2026 launch, the community took a complete snapshot of all $GOR balances on the legacy chain. Cookie Chain launched with this snapshot as its genesis state:
 
 1. The full supply of 1,000,000,000 cCOOK was minted at genesis into the Community Controlled Wallet (Vault 0).
 2. Every wallet captured in the snapshot was credited cCOOK in proportion to its legacy $GOR holdings, distributed out of Vault 0. This genesis distribution totaled approximately 268.9M cCOOK (~26.9% of supply).
@@ -77,7 +77,8 @@ $COOK exists as two mirrored representations: cCOOK native to Cookie Chain and s
 | Bridge Reserve Wallet | Cookie Chain | `BTUTiNcsrYFCsmAxQN4diwp7JT8cobthygR4vV5bnr2D` | 17,221,221 cCOOK | 1.72% | Bridge liquidity and claims support |
 | Genesis & community holders | Cookie Chain | distributed (12,528 wallets) | 291,676,574 cCOOK | 29.17% | Snapshot distribution to legacy holders plus post-genesis bridge entries |
 | Community Multi-Sig Lock Wallet | Solana | `DoYYCtcG2vfrE3HtxBBXiNVieMutvWBXsgbF3SKtYCyx` | ~392.8M sCOOK | 39.28% | Equity reserve, team allocation, and user bridge deposits (see 3.2) |
-| Public sCOOK holders | Solana | distributed | ~607.2M sCOOK | ~60.72% | Freely circulating on Solana DEXs |
+| DEX Liquidity Pool | Solana | `DRaD...Ezx` | ~126M sCOOK | ~12.6% | Liquidity pool backing sCOOK trading on Solana DEXs |
+| Public sCOOK holders | Solana | distributed | ~481.2M sCOOK | ~48.12% | Freely circulating on Solana |
 
 ### 3.2 Composition of the Solana Lock Wallet (39.28%)
 
@@ -123,7 +124,7 @@ The canonical listed asset is sCOOK on Solana. For market data aggregators:
 Excluded address:
 - `DoYYCtcG2vfrE3HtxBBXiNVieMutvWBXsgbF3SKtYCyx` (Solana lock wallet: equity reserve, team operations allocation, and bridge deposits)
 
-Resulting circulating supply: approximately **607,200,000 $COOK** (as of June 5, 2026).
+Resulting circulating supply: approximately **607,200,000 $COOK** (as of June 5, 2026). This figure includes the ~126M sCOOK held in the DEX liquidity pool, consistent with standard aggregator treatment of open market liquidity.
 
 Chain-side wallets (Vault 0, Bridge Reserve, LST Rewards) are cCOOK reserves that mirror the Solana-side supply and are not part of the sCOOK circulating calculation; they are disclosed in Section 3.1 for full transparency. Because cCOOK in user hands is backed by sCOOK locked in the excluded wallet, supply is counted once across both chains.
 
