@@ -1,0 +1,111 @@
+<svg viewBox="0 0 960 640" xmlns="http://www.w3.org/2000/svg" font-family="Segoe UI, Arial, sans-serif">
+  <defs>
+    <marker id="arrowGreen" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto">
+      <path d="M0,0 L8,3 L0,6 Z" fill="#4ade80"/>
+    </marker>
+    <marker id="arrowOrange" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto">
+      <path d="M0,0 L8,3 L0,6 Z" fill="#f0a04b"/>
+    </marker>
+  </defs>
+
+  <!-- background -->
+  <rect width="960" height="640" rx="12" fill="#0d0d12"/>
+
+  <!-- title -->
+  <text x="480" y="42" text-anchor="middle" fill="#f5f0e8" font-size="22" font-weight="600">Cookie Chain Equity Bridge</text>
+  <text x="480" y="64" text-anchor="middle" fill="#8a8a96" font-size="13">Fixed supply: 1,000,000,000 $COOK &#8226; balances as of June 5, 2026</text>
+
+  <!-- LEFT: Cookie Chain -->
+  <rect x="40" y="90" width="350" height="470" rx="10" fill="#15151c" stroke="#2a2a35"/>
+  <text x="215" y="118" text-anchor="middle" fill="#f0a04b" font-size="15" font-weight="700">COOKIE CHAIN &#8226; cCOOK</text>
+
+  <!-- Vault 0 -->
+  <rect x="65" y="135" width="300" height="92" rx="8" fill="#1e1e28" stroke="#f0a04b" stroke-width="1.5"/>
+  <text x="215" y="158" text-anchor="middle" fill="#f5f0e8" font-size="14" font-weight="600">Vault 0 (Community Controlled)</text>
+  <text x="215" y="178" text-anchor="middle" fill="#f0a04b" font-size="14" font-weight="700">590.2M &#8226; 59.02%</text>
+  <text x="215" y="198" text-anchor="middle" fill="#8a8a96" font-size="11">Undistributed reserve &#8226; source &amp; destination</text>
+  <text x="215" y="213" text-anchor="middle" fill="#8a8a96" font-size="11">for all bridge movements</text>
+
+  <!-- Users -->
+  <rect x="65" y="250" width="300" height="78" rx="8" fill="#1e1e28" stroke="#4ade80" stroke-width="1.5"/>
+  <text x="215" y="274" text-anchor="middle" fill="#f5f0e8" font-size="14" font-weight="600">Genesis &amp; Community Holders</text>
+  <text x="215" y="294" text-anchor="middle" fill="#4ade80" font-size="14" font-weight="700">291.7M &#8226; 29.17%</text>
+  <text x="215" y="313" text-anchor="middle" fill="#8a8a96" font-size="11">12,528 wallets &#8226; snapshot distribution + entries</text>
+
+  <!-- LST -->
+  <rect x="65" y="352" width="142" height="74" rx="8" fill="#1e1e28" stroke="#2a2a35"/>
+  <text x="136" y="376" text-anchor="middle" fill="#f5f0e8" font-size="12" font-weight="600">LST / Staking</text>
+  <text x="136" y="394" text-anchor="middle" fill="#c9c9d4" font-size="12">100.9M</text>
+  <text x="136" y="411" text-anchor="middle" fill="#8a8a96" font-size="11">10.09%</text>
+
+  <!-- Bridge Reserve -->
+  <rect x="223" y="352" width="142" height="74" rx="8" fill="#1e1e28" stroke="#2a2a35"/>
+  <text x="294" y="376" text-anchor="middle" fill="#f5f0e8" font-size="12" font-weight="600">Bridge Reserve</text>
+  <text x="294" y="394" text-anchor="middle" fill="#c9c9d4" font-size="12">17.2M</text>
+  <text x="294" y="411" text-anchor="middle" fill="#8a8a96" font-size="11">1.72%</text>
+
+  <!-- genesis note -->
+  <rect x="65" y="450" width="300" height="88" rx="8" fill="#13131a" stroke="#2a2a35" stroke-dasharray="4 3"/>
+  <text x="215" y="474" text-anchor="middle" fill="#c9c9d4" font-size="12" font-weight="600">Genesis (May 26, 2026)</text>
+  <text x="215" y="493" text-anchor="middle" fill="#8a8a96" font-size="11">1B cCOOK minted into Vault 0, then ~268.9M</text>
+  <text x="215" y="509" text-anchor="middle" fill="#8a8a96" font-size="11">distributed to legacy $GOR holders from a</text>
+  <text x="215" y="525" text-anchor="middle" fill="#8a8a96" font-size="11">May 3, 2026 snapshot</text>
+
+  <!-- RIGHT: Solana -->
+  <rect x="570" y="90" width="350" height="470" rx="10" fill="#15151c" stroke="#2a2a35"/>
+  <text x="745" y="118" text-anchor="middle" fill="#9d8cff" font-size="15" font-weight="700">SOLANA &#8226; sCOOK</text>
+
+  <!-- Lock wallet -->
+  <rect x="595" y="135" width="300" height="150" rx="8" fill="#1e1e28" stroke="#9d8cff" stroke-width="1.5"/>
+  <text x="745" y="158" text-anchor="middle" fill="#f5f0e8" font-size="14" font-weight="600">Multi-Sig Lock Wallet (DoYY...Cyx)</text>
+  <text x="745" y="178" text-anchor="middle" fill="#9d8cff" font-size="14" font-weight="700">392.8M &#8226; 39.28%</text>
+  <line x1="615" y1="190" x2="875" y2="190" stroke="#2a2a35"/>
+  <text x="625" y="210" fill="#c9c9d4" font-size="12">Equity reserve (genesis exits)</text>
+  <text x="875" y="210" text-anchor="end" fill="#f5f0e8" font-size="12" font-weight="600">~270M</text>
+  <text x="625" y="232" fill="#c9c9d4" font-size="12">Team ops (multi-sig locked)</text>
+  <text x="875" y="232" text-anchor="end" fill="#f5f0e8" font-size="12" font-weight="600">~100M</text>
+  <text x="625" y="254" fill="#c9c9d4" font-size="12">User bridge deposits</text>
+  <text x="875" y="254" text-anchor="end" fill="#f5f0e8" font-size="12" font-weight="600">~22.8M</text>
+  <text x="745" y="276" text-anchor="middle" fill="#8a8a96" font-size="11">every movement requires 6-of-11 approval</text>
+
+  <!-- Public holders -->
+  <rect x="595" y="308" width="300" height="78" rx="8" fill="#1e1e28" stroke="#4ade80" stroke-width="1.5"/>
+  <text x="745" y="332" text-anchor="middle" fill="#f5f0e8" font-size="14" font-weight="600">Public sCOOK Holders</text>
+  <text x="745" y="352" text-anchor="middle" fill="#4ade80" font-size="14" font-weight="700">481.2M &#8226; 48.12%</text>
+  <text x="745" y="371" text-anchor="middle" fill="#8a8a96" font-size="11">freely circulating on Solana</text>
+
+  <!-- LP -->
+  <rect x="595" y="410" width="300" height="70" rx="8" fill="#1e1e28" stroke="#2a2a35"/>
+  <text x="745" y="434" text-anchor="middle" fill="#f5f0e8" font-size="13" font-weight="600">DEX Liquidity Pool</text>
+  <text x="745" y="453" text-anchor="middle" fill="#c9c9d4" font-size="12">126M &#8226; 12.6%</text>
+  <text x="745" y="470" text-anchor="middle" fill="#8a8a96" font-size="11">counted within circulating supply</text>
+
+  <!-- circ supply note -->
+  <rect x="595" y="498" width="300" height="40" rx="8" fill="#13131a" stroke="#2a2a35" stroke-dasharray="4 3"/>
+  <text x="745" y="523" text-anchor="middle" fill="#c9c9d4" font-size="12">Circulating supply: 1B &#8722; lock wallet = 607.2M</text>
+
+  <!-- BRIDGE FLOWS -->
+  <!-- Enter: sCOOK lock wallet side -> cCOOK released from Vault 0 -->
+  <line x1="595" y1="172" x2="365" y2="172" stroke="#4ade80" stroke-width="2.5" marker-end="url(#arrowGreen)"/>
+  <text x="480" y="158" text-anchor="middle" fill="#4ade80" font-size="13" font-weight="700">ENTER &#8226; 1:1</text>
+  <text x="480" y="192" text-anchor="middle" fill="#8a8a96" font-size="10.5">deposit sCOOK into lock wallet,</text>
+  <text x="480" y="206" text-anchor="middle" fill="#8a8a96" font-size="10.5">Vault 0 releases cCOOK</text>
+
+  <!-- Exit: cCOOK returns to Vault 0 -> sCOOK released -->
+  <line x1="365" y1="262" x2="595" y2="262" stroke="#f0a04b" stroke-width="2.5" marker-end="url(#arrowOrange)"/>
+  <text x="480" y="248" text-anchor="middle" fill="#f0a04b" font-size="13" font-weight="700">EXIT &#8226; 1:1</text>
+  <text x="480" y="282" text-anchor="middle" fill="#8a8a96" font-size="10.5">cCOOK returns to Vault 0,</text>
+  <text x="480" y="296" text-anchor="middle" fill="#8a8a96" font-size="10.5">lock wallet releases sCOOK</text>
+
+  <!-- multisig badge -->
+  <rect x="408" y="330" width="144" height="34" rx="17" fill="#1e1e28" stroke="#9d8cff"/>
+  <text x="480" y="352" text-anchor="middle" fill="#9d8cff" font-size="12" font-weight="700">6-of-11 multi-sig</text>
+
+  <!-- backing badge -->
+  <rect x="396" y="380" width="168" height="56" rx="10" fill="#10241a" stroke="#4ade80" stroke-width="1.5"/>
+  <text x="480" y="403" text-anchor="middle" fill="#4ade80" font-size="14" font-weight="700">~100.4% backed</text>
+  <text x="480" y="422" text-anchor="middle" fill="#8fd6ab" font-size="11">user exit claims vs reserves</text>
+
+  <!-- footer -->
+  <text x="480" y="600" text-anchor="middle" fill="#8a8a96" font-size="11.5">No mint, no burn: bridge operations only change custody of the fixed genesis supply &#8226; verify live at cookiescan.io/top-holders</text>
+</svg>
