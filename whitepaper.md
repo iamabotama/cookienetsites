@@ -147,6 +147,22 @@ Chain-side wallets (Vault 0, Bridge Reserve, LST Rewards) are cCOOK reserves tha
 - Bridge operations
 - dApp ecosystem (Cookoven, CookieSwap, BakedBazaar, etc.)
 
+## 6. Risk Factors
+
+Holding or bridging $COOK involves significant risk. The following factors are disclosed so that holders can evaluate the system on complete information. This section will be expanded as the project evolves.
+
+### 6.1 Bridge Custody Risk
+
+The Cookie Chain bridge is operated by community multi-signature wallets rather than autonomous smart contracts. All bridge releases require approval from 6 of 11 signers on coordinated multi-sigs (Cookiequads on Cookie Chain; Squads on Solana). The security of bridged and reserve funds therefore depends on the integrity, independence, and key security of the signer group. Compromise or collusion of six signers could result in unauthorized movement of reserve funds.
+
+**Mitigations and context:**
+
+- Every custodied wallet is publicly identified in Section 3.1 and auditable in real time. Any unauthorized movement would be immediately visible to all holders.
+- Each reserve wallet has a single defined purpose. The equity reserve is used exclusively for user exits and the team operations allocation is never used for bridge settlement.
+- All 11 signers are long-standing community members with eight to eleven months of continuous involvement predating Cookie Chain's launch, a tenure that spans the Gorbagana chain's failure and the organization of this migration. The signer group was drawn from the people who built the rescue, not from participants who arrived at launch.
+- As the project matures, the signer pool is expected to expand. Any change will maintain the approval threshold above 50% of the pool, so that security scales with the group without increasing the risk of quorum failure. Expanded signer transparency, up to and including verified identities, is under consideration for later phases; specific commitments and timelines will be published as they are made.
+- The planned migration to Hyperlane Warp Routes (Section 4) replaces custodial settlement with native burn/mint mechanics, removing this dependency entirely.
+
 ## Glossary
 
 - **$COOK**: The native utility token of Cookie Chain. Used for gas fees, staking, bridging, and ecosystem activity.
