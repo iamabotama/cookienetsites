@@ -92,6 +92,8 @@ The lock wallet balance is not a single category. It consists of:
 
 ### 3.3 How the Bridge Works
 
+![Cookie Chain Equity Bridge flow diagram](bridge-flow.svg)
+
 **Entering Cookie Chain (Solana → Cookie Chain)**
 1. User deposits sCOOK into the Solana multi-sig lock wallet.
 2. An equal amount of cCOOK is released from Vault 0 to the user's Cookie Chain address.
