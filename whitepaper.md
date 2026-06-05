@@ -19,7 +19,7 @@
 
 Cookie Chain is a high-performance, community-operated Solana Virtual Machine (SVM) Layer 1 blockchain, launched May 26, 2026 as a community rescue of the Gorbagana ecosystem, whose holders had no way to move value out of the chain.
 
-$COOK has a fixed total supply of 1,000,000,000 tokens. Holders on the legacy chain received cCOOK on Cookie Chain at genesis through a snapshot distribution, and their exits are guaranteed by an equity reserve of sCOOK that the project purchased and locked in a community multi-sig on Solana. As of June 5, 2026, user exit claims are backed at approximately 100.4% by locked reserves. All bridge movement in both directions is 1:1, multi-sig governed, and publicly auditable.
+$COOK has a fixed total supply of 1,000,000,000 tokens. Holders on the legacy chain received cCOOK (the native Cookie Chain $COOK token) at genesis through a snapshot distribution, and their exits are guaranteed by an equity reserve of sCOOK (the Solana-side SPL $COOK token) that the project purchased and locked in a community multi-sig on Solana. As of June 5, 2026, user exit claims are backed at approximately 100.4% by locked reserves. All bridge movement in both directions is 1:1, multi-sig governed, and publicly auditable.
 
 The structure is transitional, with a planned migration to a Hyperlane bridge for native burn/mint mechanics.
 
