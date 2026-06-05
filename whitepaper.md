@@ -31,7 +31,7 @@ Cookie Chain originated as a community rescue of the Gorbagana ecosystem. Gorbag
 
 ### 1.2 The Genesis Snapshot
 
-In mid-May 2026, approximately two weeks prior to the May 26, 2026 launch, the community took a complete snapshot of all $GOR balances on the legacy chain. Cookie Chain launched with this snapshot as its genesis state:
+In late April 2026, approximately four weeks prior to the May 26, 2026 launch, the community took a complete snapshot of all $GOR balances on the legacy chain. Cookie Chain launched with this snapshot as its genesis state:
 
 1. The full supply of 1,000,000,000 cCOOK was minted at genesis into the Community Controlled Wallet (Vault 0).
 2. Every wallet captured in the snapshot was credited cCOOK in proportion to its legacy $GOR holdings, distributed out of Vault 0. This genesis distribution totaled approximately 268.9M cCOOK (~26.9% of supply).
