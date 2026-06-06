@@ -8,9 +8,11 @@
 - Website: https://cookiechain.wtf
 - Explorer: https://cookiescan.io
 - Bridge: https://bridge.cookiescan.io
+- Ecosystem: https://cookiechain.wtf/ecosystem
 - Docs: https://docs.cookiechain.wtf
-- Community Multi-Sig (Cookie Chain side): https://cookiequads.vercel.app/community (and https://sig.cookiechain.wtf)
-- Solana Multi-Sig (Squads): https://app.squads.so/squads/DoYYCtcG2vfrE3HtxBBXiNVieMutvWBXsgbF3SKtYCyx
+- DAS API: https://api.cookiescan.io
+- Community Multi-Sig (Cookie Chain side): https://sig.cookiechain.wtf
+- Community Multi-Sig (Solana Side): https://app.squads.so/squads/DoYYCtcG2vfrE3HtxBBXiNVieMutvWBXsgbF3SKtYCyx/treasury
 - Solana CA (sCOOK): 36ZrtQoab5MhhySaP1YSTwUahSk6GRVUTtZ6cuVfm9e1
 - Twitter: @TheCookieChain
 - Telegram: t.me/TheCookieNetChain
@@ -19,7 +21,7 @@
 
 Cookie Chain is a high-performance, community-operated Solana Virtual Machine (SVM) Layer 1 blockchain, launched May 26, 2026 as a community rescue of the Gorbagana ecosystem, whose holders had no way to move value out of the chain.
 
-$COOK has a fixed total supply of 1,000,000,000 tokens. Holders on the legacy chain received cCOOK (the native Cookie Chain $COOK token) at genesis through a snapshot distribution, and their exits are guaranteed by an equity reserve of sCOOK (the Solana-side SPL $COOK token) that the project purchased and locked in a community multi-sig on Solana. As of June 5, 2026, user exit claims are backed at approximately 100.4% by locked reserves. All bridge movement in both directions is 1:1, multi-sig governed, and publicly auditable.
+$COOK has a fixed total supply of 1,000,000,000 tokens. Holders on the legacy chain received cCOOK (the native Cookie Chain $COOK token) at genesis through a snapshot distribution, and their exits are guaranteed by an equity reserve of sCOOK (the Solana-side SPL $COOK token) that the project purchased and locked in a community multi-sig on Solana. As of June 5, 2026, user exit claims are backed at approximately 100% by locked reserves. All bridge movement in both directions is 1:1, multi-sig governed, and publicly auditable.
 
 The structure is transitional, with a planned migration to a Hyperlane bridge for native burn/mint mechanics.
 
@@ -34,8 +36,8 @@ Cookie Chain originated as a community rescue of the Gorbagana ecosystem. Gorbag
 On May 3, 2026, the community took a complete snapshot of all $GOR balances on the legacy chain (snapshot ID: gorbagana-snapshot-20260503). Cookie Chain launched on May 26, 2026 with this snapshot as its genesis state:
 
 1. The full supply of 1,000,000,000 cCOOK was minted at genesis into the Community Controlled Wallet (Vault 0).
-2. Every wallet captured in the snapshot was credited cCOOK in proportion to its legacy $GOR holdings, distributed out of Vault 0. This genesis distribution totaled approximately 268.9M cCOOK (~26.9% of supply).
-3. Project operational wallets (LST Staking Rewards, Bridge Reserve) were funded from Vault 0 at genesis.
+2. Every wallet captured in the snapshot was credited cCOOK in proportion to its legacy $GOR holdings, distributed out of Vault 0. This genesis distribution totaled approximately 279,862,165.78M cCOOK (~27.9% of supply).
+3. Project operational wallets (LST Staking Rewards, Bridge Reserve) were funded from Vault 2 at Cookie Chain Multisig Treasury.
 4. The remainder stays in Vault 0 as the bridge distribution reserve.
 
 **Key point: the community supply on Cookie Chain did not arrive through the bridge. It was a genesis distribution honoring legacy holders.** The bridge governs all movement between chains after genesis.
@@ -45,10 +47,10 @@ On May 3, 2026, the community took a complete snapshot of all $GOR balances on t
 Because genesis holders received cCOOK without ever depositing anything on Solana, the project created an equity reserve to guarantee their exit path:
 
 - $COOK was launched on Solana (sCOOK) via Pump.fun with a supply of 1,000,000,000.
-- The project acquired approximately 27% of the sCOOK supply (~270M) on the open market and via developer allocation, and deposited it into the community multi-sig lock wallet on Solana. This reserve alone covers the ~268.9M genesis distribution at roughly 100.4%.
-- The team additionally acquired and deposited 10% of sCOOK supply (~100M), reserved for marketing, rewards, and future operational fees. This allocation moves only by 6-of-11 multi-sig approval and is never used for bridge settlement.
+- The project acquired approximately 28% of the sCOOK supply (~279M) on the open market and via developer allocation, and deposited it into the community multi-sig lock wallet on Solana. This reserve alone covers the ~279.9M genesis distribution at roughly 100%.
+- The team additionally acquired and deposited 10% of sCOOK supply (~100M), reserved for marketing, rewards, and future operational fees. This allocation moves only by 6 of 11 multi-sig approval and is never used for bridge settlement. This supply is now at Cookie Chain Multisig with Vault number of 2.
 
-This 27% equity reserve is what makes the bridge an **equity bridge**: exits by genesis holders are paid from reserves the project purchased and locked, not from newly minted tokens.
+This 28% equity reserve is what makes the bridge an **equity bridge**: exits by genesis holders are paid from reserves the project purchased and locked, not from newly minted tokens.
 
 ## 2. Token Overview
 
@@ -75,7 +77,7 @@ $COOK exists as two mirrored representations: cCOOK native to Cookie Chain and s
 | Community Controlled Wallet (Vault 0) | Cookie Chain | `G3mm95M4ns7mk8oseWGJnirvgyMahMz3vZEUhdJn8oGX` | 590,222,436 cCOOK | 59.02% | Undistributed reserve; source of cCOOK for bridge entries; destination for cCOOK on exits |
 | LST / Staking Rewards | Cookie Chain | `HXV5qzn7fezEifX7BYx13Z8Yi5wZvpUcgm5fQ1gfE5m3` | 100,879,769 cCOOK | 10.09% | Staking reward distribution |
 | Bridge Reserve Wallet | Cookie Chain | `BTUTiNcsrYFCsmAxQN4diwp7JT8cobthygR4vV5bnr2D` | 17,221,221 cCOOK | 1.72% | Bridge liquidity and claims support |
-| Genesis & community holders | Cookie Chain | distributed (12,528 wallets) | 291,676,574 cCOOK | 29.17% | Snapshot distribution to legacy holders plus post-genesis bridge entries |
+| Genesis & community holders | Cookie Chain | distributed (12,528 wallets) | 279,862,165.78 cCOOK | 27.98% | Snapshot distribution to legacy holders plus post-genesis bridge entries |
 | Community Multi-Sig Lock Wallet | Solana | `DoYYCtcG2vfrE3HtxBBXiNVieMutvWBXsgbF3SKtYCyx` | ~392.8M sCOOK | 39.28% | Equity reserve, team allocation, and user bridge deposits (see 3.2) |
 | DEX Liquidity Pool | Solana | `DRaD...Ezx` | ~126M sCOOK | ~12.6% | Liquidity pool backing sCOOK trading on Solana DEXs |
 | Public sCOOK holders | Solana | distributed | ~481.2M sCOOK | ~48.12% | Freely circulating on Solana |
@@ -87,7 +89,7 @@ The lock wallet balance is not a single category. It consists of:
 | Component | Amount | % of Supply | Purpose |
 |---|---|---|---|
 | Equity reserve | ~270M sCOOK | ~27% | Purchased by the project to back exits by genesis holders. Never used for any other purpose. |
-| Team operations allocation | ~100M sCOOK | ~10% | Marketing, rewards, future fees. Locked; moves only by 6-of-11 multi-sig. Never used for bridge settlement. |
+| Team operations allocation | ~100M sCOOK | ~10% | Marketing, rewards, future fees. Locked; moves only by 6-of-11 multi-sig. Bridged into the Cookie Chain and locked in Multi Sig Vault number 2. |
 | User bridge deposits | ~22.8M sCOOK | ~2.28% | sCOOK deposited by users entering Cookie Chain since launch |
 
 ### 3.3 How the Bridge Works
