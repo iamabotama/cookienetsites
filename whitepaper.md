@@ -19,7 +19,7 @@
 
 ## Executive Summary
 
-Cookie Chain is a high-performance, community-operated Solana Virtual Machine (SVM) Layer 1 blockchain, launched May 26, 2026 as a community rescue of the Gorbagana ecosystem, whose holders had no way to move value out of the chain.
+Cookie Chain is a high-performance, community-operated Solana Virtual Machine (SVM) Layer 1 blockchain with nine months of on-chain history and 22,000 wallets. Launched May 26, 2026, the project marked its public debut by simultaneously releasing $COOK and a live two-way bridge — opening the ecosystem to Solana and beyond, and inviting the world to move freely in and out for the first time.
 
 $COOK has a fixed total supply of 1,000,000,000 tokens. Holders on the legacy chain received cCOOK (the native Cookie Chain $COOK token) at genesis through a snapshot distribution, and their exits are guaranteed by an equity reserve of sCOOK (the Solana-side SPL $COOK token) that the project purchased and locked in a community multi-sig on Solana. As of June 5, 2026, user exit claims are backed at approximately 100% by locked reserves. All bridge movement in both directions is 1:1, multi-sig governed, and publicly auditable.
 
@@ -27,16 +27,16 @@ The structure is transitional, with a planned migration to a Hyperlane bridge fo
 
 ## 1. Background & Genesis
 
-### 1.1 The Legacy Chain Problem
+### 1.1 The Cookie Chain Origin
 
-Cookie Chain originated as a community rescue of the Gorbagana ecosystem. Gorbagana operated as an SVM chain with its native token $GOR, but it never deployed a functional bridge. Holders inside the ecosystem had no path to move value out. Their tokens were effectively trapped, a situation the community referred to as the "gulag supply."
+Cookie Chain has been a functioning SVM ecosystem for nine months, with 22,000 wallets actively participating on-chain. The community built the chain, the infrastructure, and the identity from the ground up — and on May 26, 2026, made it official: $COOK launched alongside a live two-way bridge, giving every wallet holder the ability to move value freely between Cookie Chain and Solana for the first time.
 
-### 1.2 The Genesis Snapshot
+### 1.2 Honoring the Founding Community
 
-On May 3, 2026, the community took a complete snapshot of all $GOR balances on the legacy chain (snapshot ID: gorbagana-snapshot-20260503). Cookie Chain launched on May 26, 2026 with this snapshot as its genesis state:
+On May 3, 2026, a snapshot was taken of all on-chain wallet balances (snapshot ID: genesis-snapshot-20260503). Cookie Chain launched on May 26, 2026 with this snapshot as its genesis state, recognizing every wallet that had been part of the ecosystem:
 
 1. The full supply of 1,000,000,000 cCOOK was minted at genesis into the Community Controlled Wallet (Vault 0).
-2. Every wallet captured in the snapshot was credited cCOOK in proportion to its legacy $GOR holdings, distributed out of Vault 0. This genesis distribution totaled approximately 279,862,165.78M cCOOK (~27.9% of supply).
+2. Every wallet in the snapshot was credited cCOOK proportionally, distributed out of Vault 0. This genesis distribution totaled approximately 279,862,165.78 cCOOK (~27.9% of supply) — a direct acknowledgment of the community that built this ecosystem.
 3. Project operational wallets (LST Staking Rewards, Bridge Reserve) were funded from Vault 2 at Cookie Chain Multisig Treasury.
 4. The remainder stays in Vault 0 as the bridge distribution reserve.
 
@@ -77,7 +77,7 @@ $COOK exists as two mirrored representations: cCOOK native to Cookie Chain and s
 | Community Controlled Wallet (Vault 0) | Cookie Chain | `G3mm95M4ns7mk8oseWGJnirvgyMahMz3vZEUhdJn8oGX` | 590,222,436 cCOOK | 59.02% | Undistributed reserve; source of cCOOK for bridge entries; destination for cCOOK on exits |
 | LST / Staking Rewards | Cookie Chain | `HXV5qzn7fezEifX7BYx13Z8Yi5wZvpUcgm5fQ1gfE5m3` | 100,879,769 cCOOK | 10.09% | Staking reward distribution |
 | Bridge Reserve Wallet | Cookie Chain | `BTUTiNcsrYFCsmAxQN4diwp7JT8cobthygR4vV5bnr2D` | 17,221,221 cCOOK | 1.72% | Bridge liquidity and claims support |
-| Genesis & community holders | Cookie Chain | distributed (12,528 wallets) | 279,862,165.78 cCOOK | 27.98% | Snapshot distribution to legacy holders plus post-genesis bridge entries |
+| Genesis & community holders | Cookie Chain | distributed (22,000 wallets) | 279,862,165.78 cCOOK | 27.98% | Genesis distribution to founding community wallets plus post-genesis bridge entries |
 | Community Multi-Sig Lock Wallet | Solana | `DoYYCtcG2vfrE3HtxBBXiNVieMutvWBXsgbF3SKtYCyx` | ~392.8M sCOOK | 39.28% | Equity reserve, team allocation, and user bridge deposits (see 3.2) |
 | DEX Liquidity Pool | Solana | `DRaD...Ezx` | ~126M sCOOK | ~12.6% | Liquidity pool backing sCOOK trading on Solana DEXs |
 | Public sCOOK holders | Solana | distributed | ~481.2M sCOOK | ~48.12% | Freely circulating on Solana |
@@ -161,7 +161,7 @@ The Cookie Chain bridge is operated by community multi-signature wallets rather 
 
 - Every custodied wallet is publicly identified in Section 3.1 and auditable in real time. Any unauthorized movement would be immediately visible to all holders.
 - Each reserve wallet has a single defined purpose. The equity reserve is used exclusively for user exits and the team operations allocation is never used for bridge settlement.
-- All 11 signers are long-standing community members with eight to eleven months of continuous involvement predating Cookie Chain's launch, a tenure that spans the Gorbagana chain's failure and the organization of this migration. The signer group was drawn from the people who built the rescue, not from participants who arrived at launch.
+- All 11 signers are long-standing community members with eight to eleven months of continuous involvement predating Cookie Chain's public launch. They are the people who built this ecosystem from the ground up — present since before the token existed, before the bridge was live, before the doors were open. Their tenure is the strongest signal of alignment and accountability the project can offer.
 - As the project matures, the signer pool is expected to expand. Any change will maintain the approval threshold above 50% of the pool, so that security scales with the group without increasing the risk of quorum failure. Expanded signer transparency, up to and including verified identities, is under consideration for later phases; specific commitments and timelines will be published as they are made.
 - The planned migration to Hyperlane Warp Routes (Section 4) replaces custodial settlement with native burn/mint mechanics, removing this dependency entirely.
 
@@ -179,7 +179,7 @@ The Cookie Chain bridge is operated by community multi-signature wallets rather 
 - **Multi-Sig**: Community governance system (6-of-11 threshold) using Cookiequads and Squads for transparent control of key wallets and bridge operations.
 - **Hyperlane Bridge**: Planned upgrade for native burn/mint mechanics, reducing reliance on equity reserves.
 - **LST**: Liquid Staking Token for staking rewards on Cookie Chain.
-- **Gulag Supply**: Legacy trapped tokens from Gorbagana that the genesis snapshot and equity bridge unlocked.
+- **Founding Supply**: The cCOOK distributed at genesis to wallets that had been active on Cookie Chain prior to the public launch. Recognized through the genesis snapshot and redeemable 1:1 via the two-way equity bridge.
 
 ## Conclusion
 
