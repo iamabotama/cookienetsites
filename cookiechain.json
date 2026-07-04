@@ -36,7 +36,11 @@
       "url": "https://sig.cookiechain.wtf"
     },
     {
-      "label": "Cookienet Bridge",
+      "label": "Hyperlane Bridge (instant)",
+      "url": "https://hyperlane.cookiescan.io"
+    },
+    {
+      "label": "Cookienet Bridge (legacy, 12-24h)",
       "url": "https://bridge.cookiescan.io"
     },
     {
@@ -46,6 +50,6 @@
     {
       "label": "gorboy on Cookienet",
       "url": "https://www.gorboy.com"
-    }    
+    }
   ]
 }
