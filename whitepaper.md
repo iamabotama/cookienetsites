@@ -8,8 +8,8 @@
 - Website: https://cookiechain.wtf
 - Investor site: https://invest.cookiechain.wtf
 - Explorer: https://cookiescan.io
-- Hyperlane Bridge (instant): https://hyperlane.cookiescan.io
-- Legacy Bridge (12-24h): https://bridge.cookiescan.io
+- Bridge (Hyperlane, instant): https://hyperlane.cookiescan.io
+- Legacy escrow bridge: deprecated July 10, 2026 (do not send funds)
 - Ecosystem: https://cookiechain.wtf/ecosystem
 - Docs: https://docs.cookiechain.wtf
 - DAS API: https://api.cookiescan.io
@@ -22,13 +22,11 @@
 
 ## Executive Summary
 
-Cookie Chain is a high-performance, community-operated Solana Virtual Machine (SVM) Layer 1 blockchain. The chain has been producing blocks since well before its public debut; as of July 3, 2026 it has processed over 35.4 million transactions across more than 10.3 million slots, secured by 7 active validators, with 12,528 wallets holding COOK on-chain. The public debut on May 26, 2026 launched $COOK together with a live two-way bridge to Solana.
+Cookie Chain is a high-performance, community-operated Solana Virtual Machine (SVM) Layer 1 blockchain. The chain has been producing blocks since well before its public debut; as of July 12, 2026 it has processed over 35 million transactions across more than 12.2 million slots, secured by a validator set of 7 (4 currently active, all running Agave 3.1.13), with 12,528 wallets holding COOK on-chain. The public debut on May 26, 2026 launched $COOK together with a live two-way bridge to Solana.
 
 $COOK was minted with a supply of 1,000,000,000 and can never be minted again (mint authority permanently revoked at creation). Holders on the legacy chain received cCOOK (the native Cookie Chain representation) at genesis through a snapshot distribution. Their exits are guaranteed by an equity reserve of sCOOK (the Solana-side SPL representation) that the project purchased and locked in a community multi-sig on Solana. As of July 3, 2026, user exit claims are backed at approximately 110% by locked reserves.
 
-Cookie Chain operates two bridges:
-- **Hyperlane Warp Route** (live July 3, 2026): instant, automated, collateral-type transfers. The primary bridge going forward.
-- **Legacy escrow bridge** (live since May 26, 2026): manual community-operated settlement, roughly 12-24 hour turnaround. Remains available while the community discusses migrating its function fully to Hyperlane.
+Cookie Chain's bridge is the **Hyperlane Warp Route**: instant, automated, collateral-type transfers, live since July 3, 2026 and out of beta since July 6, 2026. The original community-operated escrow bridge served from launch (May 26) until it was **deprecated on July 10, 2026**; all transfers now run through Hyperlane. The equity reserve backing genesis holders remains locked under multi-sig custody and is unaffected by the deprecation.
 
 $COOK is listed on CoinGecko as both a token (coingecko.com/en/coins/cookie-2) and a chain ecosystem.
 
@@ -88,7 +86,7 @@ $COOK exists as two mirrored representations: cCOOK native to Cookie Chain and s
 | Vault 1 "Cookie Jar" | `568tU9FMksJDxjkLBjWisSA4J4C5uPH87NCCkyREwrxe` | 30,900,000.80 | 3.09% | Community treasury: donations from community app protocol fees; funds builder incentives, dev support, hackathon rewards |
 | Vault 2 "Baked Reserve" | `HXV5qzn7fezEifX7BYx13Z8Yi5wZvpUcgm5fQ1gfE5m3` | 100,879,769.20 | 10.09% | LST/validator staking rewards; backed 1:1 by the 100M sCOOK team deposit locked on Solana |
 | Vault 3 (reserved) | `AEMq4AZiGU2smZJX4Y3hqrSmAocGJzBAyvNDWSQeQ4Xe` | 0 | 0% | Unused |
-| Bridge operations wallet | `BTUTiNcsrYFCsmAxQN4diwp7JT8cobthygR4vV5bnr2D` | 1,088,035.49 | 0.11% | Legacy bridge working wallet; topped up from Vault 0 by public multi-sig proposal |
+| Bridge operations wallet (legacy, deprecated Jul 10) | `BTUTiNcsrYFCsmAxQN4diwp7JT8cobthygR4vV5bnr2D` | 1,088,035.49 | 0.11% | Working wallet of the deprecated escrow flow; residual float pending wind-down |
 | Hyperlane collateral (Cookie Chain side) | `CL2JoQ5jdTpRNKshWhaTihuooT4qrKdLUiPsqKj3yAKz` | 2,543,348.53 | 0.25% | Warp route collateral pool |
 | Genesis & community holders | distributed (12,528 wallets hold COOK) | 287,366,410.05 | 28.74% | Genesis distribution (279,862,165.78) plus net post-genesis bridge entries |
 
@@ -100,7 +98,7 @@ Chain-side total: **1,000,000,000.00 ✓**
 |---|---|---|---|
 | Community Multi-Sig Lock Vault (Squads "Cookie Community") | `DoYYCtcG2vfrE3HtxBBXiNVieMutvWBXsgbF3SKtYCyx` | 415,697,219.14 | Equity reserve + team deposit backing Vault 2 + user bridge deposits. **Excluded from circulating supply** |
 | Hyperlane collateral (Solana side) | `88q7zoKctwAQRsoTxkMJy95sNE3tntuyEhSrhvR1eZwq` | 1,484,476.47 | Warp route collateral escrow (counted as circulating; operational) |
-| Legacy bridge working wallet | `BTUTiNcsrYFCsmAxQN4diwp7JT8cobthygR4vV5bnr2D` | 2,077,140.49 | Manual settlement float (counted as circulating; operational) |
+| Legacy bridge working wallet (deprecated Jul 10) | `BTUTiNcsrYFCsmAxQN4diwp7JT8cobthygR4vV5bnr2D` | 2,077,140.49 | Residual float of the deprecated escrow flow (counted as circulating) |
 | DEX Liquidity Pool (PumpSwap) | `DRaDjBfCtCCD2Kb1rzMtom3oDiGnwTu9LBgA7WA4LEzx` | ~117.4M (live: dexscreener.com/solana/DRaDjBfCtCCD2Kb1rzMtom3oDiGnwTu9LBgA7WA4LEzx) | Open-market liquidity; counted as circulating |
 | Public sCOOK holders | distributed (315 holders) | remainder | Freely circulating |
 
@@ -114,17 +112,17 @@ Chain-side total: **1,000,000,000.00 ✓**
 
 Note on the 100M: this allocation exists once, represented on both chains. The sCOOK sits locked on Solana; the corresponding cCOOK sits in Vault 2 chain-side. It is excluded from circulating supply (inside the lock vault) and counted once.
 
-### 3.3 How the Bridges Work
+### 3.3 How the Bridge Works
 
-Cookie Chain's bridge system has three layers, all publicly auditable:
+The bridge system has two remaining layers, both publicly auditable, plus one retired flow:
 
-**Custody layer:** identical 10-member community multi-sigs on both chains (Squads on Solana, Cookiequads on Cookie Chain) hold the reserves: the Solana lock vault and Vault 0.
+**Hyperlane Warp Route (the bridge):** instant, automated, collateral-type transfers, live July 3, 2026 and out of beta July 6, 2026. COOK is locked in the collateral pool on the sending chain and a relayer delivers 1:1 COOK from the destination pool within seconds. Collateral addresses: `CL2JoQ5j...yAKz` (Cookie Chain) and `88q7zoKc...eZwq` (Solana). Bridge UI: https://hyperlane.cookiescan.io
 
-**Hyperlane Warp Route (primary, live July 3, 2026):** instant, automated, collateral-type transfers. COOK is locked in the collateral pool on the sending chain and a relayer delivers 1:1 COOK from the destination pool within seconds. Collateral addresses: `CL2JoQ5j...yAKz` (Cookie Chain) and `88q7zoKc...eZwq` (Solana). Bridge UI: https://hyperlane.cookiescan.io
+**Custody layer:** identical 10-member community multi-sigs on both chains (Squads on Solana, Cookiequads on Cookie Chain) hold the reserves: the Solana lock vault and Vault 0. The equity reserve continues to back user-held cCOOK exactly as before; the bridge transition changed the transfer path, not the backing.
 
-**Legacy escrow bridge (live May 26, 2026):** users send COOK to the bridge working wallet (`BTUT...nr2D`) with a destination memo; settlement on the destination side is completed manually by operations within roughly 12-24 hours. The working wallet is topped up from Vault 0 by public 6-of-10 multi-sig proposal; each top-up is an on-chain, community-approved transaction. Large reserves never sit in the working wallet. Automation for this flow is governed by the multi-sig (the settlement program's upgrade authority is the community vault itself). Bridge UI: https://bridge.cookiescan.io
+**Legacy escrow bridge (deprecated July 10, 2026):** the original flow — deposit to the working wallet (`BTUT...nr2D`) with a destination memo, manual multi-sig-governed settlement in 12-24 hours — operated from launch on May 26, 2026 until its deprecation on July 10, 2026. It has been retired in favor of the instant Hyperlane route; funds should not be sent to it. Residual operational float in the working wallet is being wound down.
 
-No tokens are minted or burned in bridge operation on either path; the fixed supply changes custody. The legacy bridge is expected to see minimal use now that Hyperlane is live; a community discussion is underway regarding full migration.
+No tokens are minted or burned in bridge operation; the fixed supply changes custody.
 
 ### 3.4 Supply Reconciliation (as of July 3, 2026)
 
@@ -161,8 +159,8 @@ This is the same methodology CoinGecko independently applies to $COOK. The figur
 ## 5. Token Utility & Economics
 
 - Gas fees on Cookie Chain
-- Staking & LST rewards (funded from Vault 2 "Baked Reserve"; 7 active validators as of July 3, 2026)
-- Bridging (Hyperlane instant; legacy escrow)
+- Staking & LST rewards (funded from Vault 2 "Baked Reserve"; validator set of 7, 4 active, as of July 12, 2026)
+- Bridging (Hyperlane, instant)
 - dApp ecosystem: Cookoven, CandyShop, CookieSwap, CookieBox, BakedBazaar, gorboy, and community programs funded via Vault 1 "Cookie Jar"
 
 ## 6. Risk Factors
@@ -173,19 +171,28 @@ Holding or bridging $COOK involves significant risk. The following factors are d
 
 **Reserve custody:** reserves are held by community multi-signature wallets rather than autonomous smart contracts. All releases require 6-of-10 signer approval on coordinated multi-sigs. Security of custodied funds depends on the integrity, independence, and key security of the signer group; compromise or collusion of six signers could move reserve funds without authorization.
 
-**Hyperlane route:** live as of July 3, 2026. Hyperlane protocol security assumptions (validator set / relayer configuration) apply to in-flight transfers; collateral pools hold only operational amounts (~4M COOK combined).
+**Hyperlane route:** live since July 3, 2026 (out of beta July 6). Hyperlane protocol security assumptions (validator set / relayer configuration) apply to in-flight transfers; collateral pools hold only operational amounts (~4M COOK combined as of July 3).
 
-**Legacy escrow flow:** the working wallet is a single-signer hot wallet by design, holding only small operational float (~3.2M COOK combined across chains as of July 3); reserves remain under multi-sig custody, and manual settlement introduces a 12-24 hour delay.
+**Legacy escrow flow (deprecated July 10, 2026):** the retired flow's working wallet is a single-signer hot wallet holding a small residual float pending wind-down; reserves were never held there and remain under multi-sig custody.
+
+**Validator concentration:** as of July 12, 2026 the network runs 4 active validators with stake concentrated among a small operator set; validator onboarding and stake distribution are active workstreams (see the live set at cookiescan.io/validators).
 
 **Mitigations and context:**
 - Every custodied wallet is publicly identified in Section 3.1 and auditable in real time; unauthorized movement would be immediately visible.
 - Each vault has a single defined purpose, and vault outflows occur only via public multi-sig proposals.
 - The signer group consists of long-standing community members whose involvement predates the public launch. Membership changes are executed transparently on-chain.
-- The Hyperlane route removes custodial settlement from day-to-day transfers; the community is discussing full migration of legacy-bridge function to Hyperlane.
+- The Hyperlane route removed custodial settlement from day-to-day transfers; the legacy flow's deprecation on July 10, 2026 completed that migration.
 
 ### 6.2 Market Risk
 
 $COOK trades with limited liquidity concentrated in a single DEX pool (PumpSwap COOK/SOL, ~$27K liquidity as of July 3, 2026). Prices can move significantly on small orders. Verify pool depth before transacting.
+
+## Document History
+
+- **v3.1 (July 13, 2026):** Legacy escrow bridge recorded as deprecated (July 10); Hyperlane beta exit (July 6) recorded; Hyperlane established as the sole transfer path; validator set stated precisely (7 total, 4 active, Agave 3.1.13); network statistics refreshed through July 12; risk section updated (validator concentration added, escrow risk retired). Balance reconciliation remains as of July 3, 2026.
+- **v3.0 (July 3, 2026):** Full single-timestamp reconciliation; genesis figure fixed at 279,862,165.78; dual-bridge architecture documented; governance corrected to 6-of-10; on-chain token facts verified (6 decimals, Token-2022, authorities null); circulating supply methodology aligned with CoinGecko.
+- **v2.0 (June 5, 2026):** Tokenomics restatement for aggregator listings.
+- **v1.0 (May 2026):** Initial publication.
 
 ## Glossary
 
@@ -193,19 +200,19 @@ $COOK trades with limited liquidity concentrated in a single DEX pool (PumpSwap 
 - **sCOOK**: Solana-side representation of $COOK (Pump.fun-launched Token-2022 SPL token, 6 decimals).
 - **cCOOK**: Native Cookie Chain-side representation of $COOK.
 - **Genesis Snapshot Distribution**: The launch-day crediting of 279,862,165.78 cCOOK to all snapshot wallets in proportion to their balances.
-- **Equity Bridge (legacy bridge)**: The community-operated escrow bridge backed by a purchased sCOOK reserve rather than mint/burn; manual settlement, 12-24h.
-- **Hyperlane Warp Route**: The instant collateral-type bridge live since July 3, 2026; the primary transfer path between Cookie Chain and Solana.
+- **Equity Bridge (legacy bridge)**: The original community-operated escrow bridge (manual settlement, 12-24h), backed by the purchased sCOOK reserve. Operated May 26 - July 10, 2026; now deprecated.
+- **Hyperlane Warp Route**: The instant collateral-type bridge, live July 3 and out of beta July 6, 2026; since the legacy bridge's deprecation on July 10, 2026, the sole transfer path between Cookie Chain and Solana.
 - **Equity Reserve**: sCOOK purchased by the project and locked in the Solana multi-sig to back the genesis claim base of 279,862,165.78.
 - **Vault 0 "Bridge Vault"**: Main pre-minted reserve on Cookie Chain (`G3mm...oGX`).
 - **Vault 1 "Cookie Jar"**: Community treasury vault funded by community app protocol-fee donations (`568t...wrxe`).
 - **Vault 2 "Baked Reserve"**: LST/validator staking rewards vault (`HXV5...E5m3`), backed 1:1 by the 100M sCOOK team deposit locked on Solana.
-- **Bridge Operations Wallet**: Working wallet for legacy bridge processing (`BTUT...nr2D`), topped up from Vault 0 by public proposal.
+- **Bridge Operations Wallet**: Working wallet of the deprecated legacy escrow flow (`BTUT...nr2D`); residual float pending wind-down.
 - **Solana Lock Vault**: Squads vault holding the equity reserve, the team deposit, and legacy-bridge user deposits (`DoYY...YCyx`).
 - **Multi-Sig**: Community governance requiring 6 approvals from the 10-member signer set (as of July 3, 2026), via Cookiequads and Squads.
 - **LST**: Liquid Staking Token for staking rewards on Cookie Chain.
 
 ## Conclusion
 
-Cookie Chain's genesis snapshot honored every legacy holder with exactly 279,862,165.78 cCOOK, and the purchased equity reserve backs their path out at approximately 110% as of this writing. With the Hyperlane bridge now live, day-to-day transfers no longer depend on manual settlement, while reserves remain under identical 10-member multi-sig governance on both chains with fully public wallet addresses. The model provides verifiable user protection with a clear path toward broader decentralization.
+Cookie Chain's genesis snapshot honored every legacy holder with exactly 279,862,165.78 cCOOK, and the purchased equity reserve backs their path out at approximately 110% as of this writing. With the Hyperlane bridge live and the legacy escrow flow retired as of July 10, 2026, all transfers are instant and automated, while reserves remain under identical 10-member multi-sig governance on both chains with fully public wallet addresses. The model provides verifiable user protection with a clear path toward broader decentralization.
 
 **This is not financial advice. DYOR and verify on cookiescan.io.**
