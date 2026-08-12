@@ -1,4 +1,5 @@
 {
+  "_deprecated": "Superseded by https://raw.githubusercontent.com/cookiechain/apps/main/apps.json (the cookiechain org registry). This file is kept only so previously pasted embeds keep working. Do not add new consumers.",
   "twitter_url": "https://x.com/TheCookieChain",
   "telegram_url": "https://t.me/TheCookieNetChain",
   "ca": "36ZrtQoab5MhhySaP1YSTwUahSk6GRVUTtZ6cuVfm9e1",
@@ -37,19 +38,19 @@
     },
     {
       "label": "Hyperlane Bridge (instant)",
-      "url": "https://hyperlane.cookiescan.io"
+      "url": "https://hyperlane.cookiechain.wtf"
     },
     {
-      "label": "Cookienet Bridge (legacy, 12-24h)",
-      "url": "https://bridge.cookiescan.io"
-    },
-    {
-      "label": "Basked Bazzaar NFT's on Cookiechain",
+      "label": "Baked Bazaar NFTs on Cookiechain",
       "url": "https://bakedbazaar.art"
     },
     {
       "label": "gorboy on Cookienet",
       "url": "https://www.gorboy.com"
+    },
+    {
+      "label": "Cookie Chat",
+      "url": "https://cookiechat.net/"
     }
   ]
 }
