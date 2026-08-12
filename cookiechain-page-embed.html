@@ -12,7 +12,7 @@
   };
   function fromRegistry(entries) {
     var links = entries.filter(function (e) { return e && e.live !== false && e.title && e.href; })
-      .map(function (e) { return { label: e.title, url: e.href.replace("hyperlane.cookiechain.wtf", "hyperlane.cookiescan.io") }; });
+      .map(function (e) { return { label: e.title, url: e.href }; });
     return { twitter_url: META.twitter_url, telegram_url: META.telegram_url, ca: META.ca, links: links };
   }
 
